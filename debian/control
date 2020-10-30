@@ -1,0 +1,68 @@
+Source: wazo-python-amqp-packaging
+Section: python
+Priority: extra
+Maintainer: Wazo Maintainers <dev@wazo.community>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python3-all,
+               python-setuptools,
+               python3-setuptools
+Standards-Version: 3.9.6
+X-Python-Version: >= 2.5
+X-Python3-Version: >= 3.4
+Homepage: https://github.com/celery/py-amqp
+
+Package: python-amqp
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Suggests: python-amqp-doc
+Description: Low-level AMQP client
+ This is a fork of amqplib which was originally written by Barry Pederson. It
+ is maintained by the Celery project, and used by kombu as a pure Python
+ alternative when librabbitmq is not available.
+ .
+ This library should be API compatible with librabbitmq. Differences from
+ amqplib are:
+  * Supports draining events from multiple channels (Connection.drain_events).
+  * Support for timeouts.
+  * Channels are restored after channel error, instead of having to close the
+    connection.
+  * Support for heartbeats.
+  * Supports RabbitMQ extensions:
+    - Consumer Cancel Notifications.
+    - Publisher confirms.
+    - Exchange-to-exchange bindings: exchange_bind / exchange_unbind.
+  * Support for basic_return.
+  * Uses AMQP 0-9-1 instead of 0-8.
+  * Exposes the underlying socket as Connection.sock.
+  * Adds Channel.no_ack_consumers to keep track of consumer tags that set the
+    no_ack flag.
+  * Slightly better at error recovery.
+
+Package: python3-amqp
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Suggests: python-amqp-doc
+Description: Low-level AMQP client
+ This is a fork of amqplib which was originally written by Barry Pederson. It
+ is maintained by the Celery project, and used by kombu as a pure Python
+ alternative when librabbitmq is not available.
+ .
+ This library should be API compatible with librabbitmq. Differences from
+ amqplib are:
+  * Supports draining events from multiple channels (Connection.drain_events).
+  * Support for timeouts.
+  * Channels are restored after channel error, instead of having to close the
+    connection.
+  * Support for heartbeats.
+  * Supports RabbitMQ extensions:
+    - Consumer Cancel Notifications.
+    - Publisher confirms.
+    - Exchange-to-exchange bindings: exchange_bind / exchange_unbind.
+  * Support for basic_return.
+  * Uses AMQP 0-9-1 instead of 0-8.
+  * Exposes the underlying socket as Connection.sock.
+  * Adds Channel.no_ack_consumers to keep track of consumer tags that set the
+    no_ack flag.
+  * Slightly better at error recovery.

@@ -1,0 +1,5 @@
+wazo-python-amqp-packaging (2.6.1-1~wazo1) wazo-dev-buster; urgency=medium
+
+  * Init
+
+ -- Wazo Maintainers <dev+pkg@wazo.community>  Fri, 30 Oct 2020 11:49:21 -0400
