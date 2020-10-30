@@ -12,7 +12,8 @@ To upgrade amqp:
 
 ## Building Locally
 
-To build on a test environment before submitting a change to production the following procedure can be used.
+To build on a test environment before submitting a change to production the following procedure can
+be used.
 
 ```sh
 make -f debian/rules get-orig-source
