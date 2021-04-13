@@ -20,3 +20,4 @@ tar -xvf ../wazo-python-amqp-packaging_*.orig.tar.gz  --strip 1
 dpkg-buildpackage -us -uc
 ```
 The `.deb` will be located in the parent directory.
+
